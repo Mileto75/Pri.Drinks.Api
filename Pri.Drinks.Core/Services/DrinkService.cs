@@ -99,7 +99,7 @@ namespace Pri.Drinks.Core.Services
                     IsSuccess = false,
                     Errors = new List<string> { "No drinks found!" }
                 };
-            }""
+            }
             return new ResultModel<Drink>
             {
                 IsSuccess = true,

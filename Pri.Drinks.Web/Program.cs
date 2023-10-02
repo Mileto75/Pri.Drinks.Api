@@ -21,9 +21,9 @@ namespace Pri.Drinks.Web
                 .UseSqlServer(builder.Configuration
                 .GetConnectionString("ApplicationDb")));
             //register the repository service
-            builder.Services.AddTransient<IBaseRepository<Drink>, DrinkRepository>();
-            builder.Services.AddTransient<IBaseRepository<Category>, CategoryRepository>();
-            builder.Services.AddTransient<IBaseRepository<Property>, PropertyRepository>();
+            builder.Services.AddTransient<IDrinkRepository, DrinkRepository>();
+            builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
+            builder.Services.AddTransient<IPropertyRepository, PropertyRepository>();
             builder.Services.AddTransient<IDrinkService, DrinkService>();
             builder.Services.AddControllersWithViews();
 
